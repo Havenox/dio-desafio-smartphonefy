@@ -1,22 +1,127 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+# 📱 Smartphonefy
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+Um sistema de modelagem de celulares desenvolvido em **C# .NET**, como parte de um desafio da [DIO](https://dio.me/users/eduardonascto). O projeto aplica conceitos de **Programação Orientada a Objetos (POO)**, com abstração, herança e polimorfismo.
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+---
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+## 📖 Descrição
 
-![Diagrama classes](Imagens/diagrama.png)
+O **Smartphonefy** foi projetado para simular o funcionamento de celulares de diferentes marcas e modelos, aproveitando ao máximo os conceitos de orientação a objetos. Ele permite:
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+* Modelar um **Smartphone** como classe abstrata.
+* Criar implementações específicas para **Nokia** e **iPhone**.
+* Sobrescrever métodos para representar comportamentos distintos, como a instalação de aplicativos.
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+Assim como no desafio anterior, o código base já existia e continha trechos sinalizados com **TODO**. Minha tarefa foi **complementar a implementação**, o que reforçou a prática de trabalhar em projetos já iniciados.
+
+---
+
+## ⚙️ Funcionalidades
+
+* **Classe abstrata Smartphone**:
+
+  * Modelo base, não pode ser instanciada.
+  * Propriedades: número, modelo e IMEI.
+  * Métodos comuns (ligar, receber ligação).
+* **Classe Nokia**:
+
+  * Herda de **Smartphone**.
+  * Implementa sua própria forma de instalar aplicativos.
+* **Classe iPhone**:
+
+  * Herda de **Smartphone**.
+  * Implementa sua própria forma de instalar aplicativos.
+
+---
+
+## 🛠️ Estrutura do Projeto
+
+* **Smartphone.cs** → classe abstrata base.
+* **Nokia.cs** → classe concreta herdando de Smartphone.
+* **iPhone.cs** → classe concreta herdando de Smartphone.
+* **Program.cs** → fluxo principal para executar e testar as funcionalidades.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+* Linguagem: **C#**
+* Plataforma: **.NET 9+**
+* Paradigma: **Programação Orientada a Objetos (POO)**
+
+---
+
+## 📂 Como Executar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/Havenox/dio-desafio-smartphonefy.git
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd dio-desafio-smartphonefy
+```
+
+3. Compile e execute:
+
+```bash
+dotnet run
+```
+
+---
+
+## 🧩 Exemplo de Uso
+
+```
+Smartphonefy - Sistema de Celulares
+
+Digite a opção desejada:
+
+1 - Criar Nokia
+2 - Criar iPhone
+3 - Instalar aplicativo
+4 - Fazer ligação
+5 - Receber ligação
+0 - Encerrar aplicação
+```
+
+Exemplo de saída ao instalar um app em celulares diferentes:
+
+```
+Instalando aplicativo no Nokia: WhatsApp
+Instalando aplicativo no iPhone: WhatsApp
+```
+
+---
+
+## 🎯 Objetivos Atingidos
+
+* Aplicar **abstração** para definir o modelo base de smartphone.
+* Exercitar **herança** e criação de subclasses específicas.
+* Utilizar **polimorfismo** para métodos com implementações distintas.
+* Praticar a implementação de código em um **projeto parcialmente pronto**.
+* Consolidar conceitos fundamentais de POO em C#.
+
+---
+
+## 📌 Autor
+
+👤 **[Eduardo Nascimento](https://www.instagram.com/eduardohavenox/)**
+🔗 [GitHub](https://github.com/Havenox)
+💼 [LinkedIn](https://www.linkedin.com/in/havenox)
+🎓 [DIO](https://dio.me/users/eduardonascto)
+
+---
+
+## 🙏 Agradecimentos
+
+Agradeço à DIO pela proposta do desafio e ao professor Leonardo Buta, pelas aulas que tornaram clara a importância da **abstração e polimorfismo** no desenvolvimento orientado a objetos.
+
+---
+
+## 🏆 Considerações
+
+Este projeto reforçou o aprendizado sobre **POO em C#**, mostrando a importância de abstrair, herdar e especializar classes em sistemas reais. O **Smartphonefy** exemplifica como reutilizar código e ao mesmo tempo criar comportamentos específicos, além de treinar a habilidade de trabalhar em projetos com código já iniciado.
